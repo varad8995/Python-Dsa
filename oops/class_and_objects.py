@@ -1,17 +1,72 @@
 class Student:
-    name = ""
-    age = 0
-    gender = ""
+    def __init__(self):
+        self.name = input("Enter name = ")
+        self.age = int(input("Enter age = "))
+        self.gender = input("Enter gender = ")
+        self.phone = int(input("Enter phone = "))
+    def updateAge(self, new_age: int) -> None:
+        self.age = new_age
+    def update(self, new_phone):
+        if len(str(new_phone)) == 10:
+            self.phone = new_phone
+        else:
+            print("Invalid Number")
+    def display(self):
+        print(f"My name is {self.name}")
+        print(f"My age is {self.age}")
+        print(f"My gender is {self.gender}")
+        print(f"My phone is {self.phone}")
 
 s1 = Student()
-s1.name = "Anirudh"
-s1.age = 66
-s1.gender = "Male"
-print(s1.name)
-print(s1.age)
-print(s1.gender)
-print("------")
-s2 = Student()
-print(s2.name)
-print(s2.age)
-print(s2.gender)
+s1.display()
+a = int(input("Enter new age = "))
+s1.updateAge(a)
+s1.display()
+class Student:
+    def __init__(self):
+        self.name = input("Enter name = ")
+        self.age = int(input("Enter age = "))
+        self.gender = input("Enter gender = ")
+        self.phone = int(input("Enter phone = "))
+    def updateAge(self, new_age: int) -> None:
+        self.age = new_age
+    def update(self, new_phone):
+        if len(str(new_phone)) == 10:
+            self.phone = new_phone
+        else:
+            print("Invalid Number")
+    def display(self):
+        print(f"My name is {self.name}")
+        print(f"My age is {self.age}")
+        print(f"My gender is {self.gender}")
+        print(f"My phone is {self.phone}")
+
+s1 = Student()
+s1.display()
+a = int(input("Enter new age = "))
+s1.updateAge(a)
+s1.display()
+class Student:
+    # Constructor
+    def __init__(self):
+        self.name = input("Enter name = ")
+        self.age = int(input("Enter age = "))
+        self.gender = input("Enter gender = ")
+        self.phone = int(input("Enter phone = "))
+    def update(self):
+        phone = int(input("Enter new number = "))
+        if len(str(phone)) == 10:
+            self.phone = phone
+        else:
+            print("Invalid Number")
+    # Methods
+    def display(self):
+        print(f"My name is {self.name}")
+        print(f"My age is {self.age}")
+        print(f"My gender is {self.gender}")
+        print(f"My phone is {self.phone}")
+
+s1 = Student()
+s1.display()
+s1.update()
+s1.display()
